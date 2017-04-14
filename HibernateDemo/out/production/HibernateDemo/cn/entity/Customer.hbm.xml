@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<!--约束-->
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn">
+
+    <class name="cn.entity.Customer" table="t_Customer">
+
+        <id name="custid" column="custid">
+            <generator class="native"></generator>
+        </id>
+        <property name="custName" column="custName"></property>
+
+
+        <!--cascade="save-update" 级联保存-->
+        <!--cascade="save-update,delete" 配置了级联删除-->
+        <!--inverse="true-->
+        <set name="setLinkMan" cascade="save-update,delete" inverse="true">
+            <key column="clid"></key>
+            <one-to-many class="cn.entity.LinkMan"/>
+        </set>
+
+
+    </class>
+
+
+
+
+</hibernate-mapping>
