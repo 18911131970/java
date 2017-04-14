@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>随机验证码</title>
+
+    <script type="text/javascript">
+        function change(img){
+            img.src = img.src + "?" + new Date().getTime();
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        验证码:<input type="text" name="checkcode"><img src="/abc/Servlet6"  onclick="change(this)">
+
+    </form>
+</body>
+</html>

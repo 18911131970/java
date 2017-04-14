@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!--为整个web应用配置初始化参数-->
+    <context-param>
+        <param-name>data</param-name>
+        <param-value>context-param</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>Servlet</servlet-name>
+        <servlet-class>cn.servlet.Servlet</servlet-class>
+        <!--一启动就创建 servlet  数字越小越早启动-->
+        <load-on-startup>3</load-on-startup>
+
+        <!--初始化数据-->
+        <init-param>
+            <param-name>data</param-name>
+            <param-value>datadatadatadata</param-value>
+        </init-param>
+
+        <!--字体类型-->
+        <init-param>
+            <param-name>charset</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+
+        <!--数据库链接-->
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc://localhost:3306/test</param-value>
+        </init-param>
+        <!--数据库用户名-->
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <!--数据库密码-->
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <!--加载的配置文件-->
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>/hibernate.cfg.xml</param-value>
+        </init-param>
+
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet</servlet-name>
+        <url-pattern>/Servlet</url-pattern>
+    </servlet-mapping>
+
+
+
+
+    <servlet>
+        <servlet-name>Servlet1</servlet-name>
+        <servlet-class>cn.servlet.Servlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet1</servlet-name>
+        <url-pattern>/Servlet1</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>Servlet2</servlet-name>
+        <servlet-class>cn.servlet.Servlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet2</servlet-name>
+        <url-pattern>/Servlet2</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Servlet3</servlet-name>
+        <servlet-class>cn.servlet.Servlet3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet3</servlet-name>
+        <url-pattern>/Servlet3</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Servlet4</servlet-name>
+        <servlet-class>cn.servlet.Servlet4</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet4</servlet-name>
+        <url-pattern>/Servlet4</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>Servlet5</servlet-name>
+        <servlet-class>cn.servlet.Servlet5</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet5</servlet-name>
+        <url-pattern>/Servlet5</url-pattern>
+    </servlet-mapping>
+
+
+
+
+    <servlet>
+        <servlet-name>Servlet6</servlet-name>
+        <servlet-class>cn.servlet.Servlet6</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet6</servlet-name>
+        <url-pattern>/Servlet6</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Servlet7</servlet-name>
+        <servlet-class>cn.servlet.Servlet7</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet7</servlet-name>
+        <url-pattern>/Servlet7</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Servlet8</servlet-name>
+        <servlet-class>cn.servlet.Servlet8</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Servlet8</servlet-name>
+        <url-pattern>/Servlet8</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ServletRequest1</servlet-name>
+        <servlet-class>cn.servlet.ServletRequest1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletRequest1</servlet-name>
+        <url-pattern>/ServletRequest1</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>CookieDemo1</servlet-name>
+        <servlet-class>cn.Cookie.CookieDemo1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieDemo1</servlet-name>
+        <url-pattern>/CookieDemo1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CookieDemo2</servlet-name>
+        <servlet-class>cn.Cookie.CookieDemo2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieDemo2</servlet-name>
+        <url-pattern>/CookieDemo2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CookieDemo3</servlet-name>
+        <servlet-class>cn.Cookie.CookieDemo3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieDemo3</servlet-name>
+        <url-pattern>/CookieDemo3</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CookieDemo4</servlet-name>
+        <servlet-class>cn.Cookie.CookieDemo4</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieDemo4</servlet-name>
+        <url-pattern>/CookieDemo4</url-pattern>
+    </servlet-mapping>
+
+
+    <!--控制session的失效时间-->
+    <session-config>
+        <!--分钟值-->
+        <session-timeout>10</session-timeout>
+    </session-config>
+
+    <servlet>
+        <servlet-name>SessionDemo1</servlet-name>
+        <servlet-class>cn.Session.SessionDemo1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionDemo1</servlet-name>
+        <url-pattern>/SessionDemo1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SessionDemo2</servlet-name>
+        <servlet-class>cn.Session.SessionDemo2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionDemo2</servlet-name>
+        <url-pattern>/SessionDemo2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FormDemo1</servlet-name>
+        <servlet-class>cn.Session.FormDemo1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FormDemo1</servlet-name>
+        <url-pattern>/FormDemo1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FormDemo2</servlet-name>
+        <servlet-class>cn.Session.FormDemo2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FormDemo2</servlet-name>
+        <url-pattern>/FormDemo2</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
