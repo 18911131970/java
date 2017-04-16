@@ -17,7 +17,7 @@
         <property name="user_password" column="user_password"></property>
 
 
-        <set name="setRole" table="user_role" >
+        <set name="setRole" table="user_role" cascade="save-update,delete" >
             <key column="userid"></key>
             <many-to-many class="cn.entity.manyTomany.Role" column="roleid"></many-to-many>
         </set>
