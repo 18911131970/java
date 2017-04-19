@@ -14,7 +14,7 @@
 </head>
 <body>
     <%--
-    value 中写ongl表达式
+    value 中写ognl表达式
     --%>
     <s:property value="'hello'.length()" />
 </body>
