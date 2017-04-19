@@ -10,6 +10,10 @@ public class helloAction {
     * */
     public String execute(){
         System.out.println("execute");
-        return "ok";
+        return "none";
+    }
+
+    public String add(){
+        return "add";
     }
 }
