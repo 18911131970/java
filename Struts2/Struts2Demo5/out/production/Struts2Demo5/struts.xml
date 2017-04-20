@@ -37,7 +37,9 @@
         
         <action name="login" class="cn.action.loginAction" method="login">
             <!--2、使用自定义的拦截器（默认的拦截器不再执行，需要第3部）-->
-            <interceptor-ref name="loginInterceptor"></interceptor-ref>
+            <interceptor-ref name="loginInterceptor">
+                <param name="excludeMethods">login</param>
+            </interceptor-ref>
 
             <!--3、默认拦截器手动使用一次-->
             <interceptor-ref name="defaultStack"></interceptor-ref>
