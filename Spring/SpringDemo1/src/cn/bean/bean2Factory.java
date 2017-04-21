@@ -8,4 +8,8 @@ public class bean2Factory {
     public static bean2 getBean2(){
         return new bean2();
     }
+
+    public bean2 getEntityBean2(){
+        return new bean2();
+    }
 }
