@@ -7,10 +7,10 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql:///hibernate</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">root</property>
+        <!--<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>-->
+        <!--<property name="hibernate.connection.url">jdbc:mysql:///SSHDemo1</property>-->
+        <!--<property name="hibernate.connection.username">root</property>-->
+        <!--<property name="hibernate.connection.password">root</property>-->
 
 
 
@@ -41,11 +41,8 @@
 
 
         <!--第三部分把映射文件放入核心配置文件中-->
-        <mapping resource="cn/entity/Customer.hbm.xml"></mapping>
-        <mapping resource="cn/entity/LinkMan.hbm.xml"></mapping>
+        <mapping resource="com/entity/User.hbm.xml"></mapping>
 
-        <mapping resource="cn/entity/manyTomany/Role.hbm.xml"></mapping>
-        <mapping resource="cn/entity/manyTomany/User.hbm.xml"></mapping>
 
     </session-factory>
 </hibernate-configuration>
