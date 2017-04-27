@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="test" namespace="/" extends="struts-default">
+
+        <!--
+        全局结果页面的配置
+
+        -->
+        <!--<global-results>-->
+            <!--<result name="success">/index.jsp</result>-->
+        <!--</global-results>-->
+
+
+        <!--<action name="book" class="cn.action.BookAction">-->
+            <!--&lt;!&ndash;-->
+            <!--type="dispatcher"：转发操作-->
+            <!--&ndash;&gt;-->
+            <!--<result name="success" type="dispatcher">/book.jsp</result>-->
+        <!--</action>-->
+
+        <!--<action name="orders" class="cn.action.OrdersAction" >-->
+            <!--<result name="success" type="redirect">/Orders.jsp</result>-->
+        <!--</action>-->
+
+
+        <!--跳转到其他action-->
+        <action name="book" class="cn.action.BookAction">
+
+            <result name="success" type="chain">orders</result>
+        </action>
+
+        <action name="orders" class="cn.action.OrdersAction" >
+            <result name="success" type="redirect">/Orders.jsp</result>
+        </action>
+    </package>
+
+
+    <package name="demo1" extends="struts-default" namespace="/">
+        <action name="form1" class="cn.form.form1">
+        </action>
+        <action name="form2" class="cn.form.form2">
+        </action>
+        <action name="form4" class="cn.form.form4">
+        </action>
+        <action name="data1" class="cn.data.dataDemo1Action"></action>
+        <action name="data2" class="cn.data.data2Action"></action>
+        <action name="data3" class="cn.data.data3Action"></action>
+
+        <action name="list" class="cn.data.listAction"></action>
+        <action name="map" class="cn.data.mapAction"></action>
+
+
+    </package>
+
+</struts>
