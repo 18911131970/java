@@ -38,8 +38,12 @@
         <action name="login" class="cn.action.loginAction" method="login">
             <!--2、使用自定义的拦截器（默认的拦截器不再执行，需要第3部）-->
             <interceptor-ref name="loginInterceptor">
+<<<<<<< HEAD
                 <!--3、配置action中不进行拦截的方法-->
                     <param name="excludeMethods">login</param>
+=======
+                <param name="excludeMethods">login</param>
+>>>>>>> 0f5a3fa949ba06616339f91ff7d1c669f6b438ef
             </interceptor-ref>
 
             <!--3、默认拦截器手动使用一次-->

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="user" class="cn.ioc.User" scope="prototype"></bean>
+
+    <!--使用静态工厂创建对象-->
+    <!--<bean id="bean2" class="cn.bean.bean2Factory" factory-method="getBean2"></bean>-->
+
+    <!--实例工厂创建对象-->
+    <!--1、创建工厂对象-->
+    <bean id="bean2Factory" class="cn.bean.bean2Factory"></bean>
+    <bean id="bean2" factory-bean="bean2Factory" factory-method="getEntityBean2"></bean>
+
+
+    <!--由参数的构造函数注入-->
+    <bean id="propertyDemo1" class="cn.property.PropertyDemo1">
+        <constructor-arg name="username" value="王二小"/>
+    </bean>
+
+    <bean class="cn.property.PropertyDemo2" id="propertyDemo2">
+        <property name="username" value="小张啊小张"></property>
+    </bean>
+
+
+    <bean class="cn.property.UserService" name="userService">
+        <property name="user" ref="user"></property>
+    </bean>
+
+
+    <bean class="cn.property.Person" name="person" p:pname="葫芦娃"></bean>
+
+    <bean class="cn.property.Person" name="person2">
+        <property name="arrs">
+            <list>
+                <value>小1</value>
+                <value>小2</value>
+                <value>小3</value>
+                <value>小4</value>
+            </list>
+        </property>
+
+
+        <property name="list">
+            <list>
+                <value>王1</value>
+                <value>王2</value>
+                <value>王3</value>
+                <value>王4</value>
+            </list>
+        </property>
+
+
+        <property name="map">
+            <map>
+                <entry key="a" value="tom"></entry>
+                <entry key="b" value="json"></entry>
+                <entry key="c" value="mony"></entry>
+            </map>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="driverclass">com.mysql.jdbc.Driver</prop>
+                <prop key="username">root</prop>
+                <prop key="password">root</prop>
+            </props>
+        </property>
+
+    </bean>
+</beans>
