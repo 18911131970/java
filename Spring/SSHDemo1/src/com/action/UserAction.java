@@ -17,6 +17,7 @@ public class UserAction extends ActionSupport {
     public String execute() throws Exception {
         System.out.println("UserAction------execute");
         userService.add();
+        userService.get();
         return NONE;
     }
 }
