@@ -20,6 +20,6 @@ public class BookAction extends ActionSupport {
         //值栈对象
         ValueStack stack = context.getValueStack();
 
-        return NONE;
+        return SUCCESS;
     }
 }

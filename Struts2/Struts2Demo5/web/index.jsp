@@ -16,5 +16,9 @@
   密码：<s:property value="user.password"/>
   恭喜您，登录成功！！！！！！！！
 
+  <form name="form1" action=${pageContext.request.contextPath}/book.action method="post">
+
+    <input type="submit">
+  </form>
   </body>
 </html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+    
+    <!--
+    name:与路径无关  可以有多个package name不能相同
+    extends:继承，
+    namespace:
+    -->
+    <!--<package name="helloDemo" extends="struts-default" namespace="/">-->
+        <!--&lt;!&ndash;-->
+        <!--name:访问的名称-->
+        <!--&ndash;&gt;-->
+        <!--<action name="helloAction" class="cn.action.helloAction">-->
+            <!--&lt;!&ndash;-->
+            <!--配置方法的返回值-->
+            <!--&ndash;&gt;-->
+            <!--<result name="ok">/struts2/hello.jsp</result>-->
+        <!--</action>-->
+    <!--</package>-->
+
+      <!--<include file="cn/action/hello.xml"></include>-->
+    <!--<include file="cn/action/User.xml"></include>-->
+
+
+    <!--<package name="methodDemo" extends="struts-default" namespace="/">-->
+        <!--<action name="addAction" class="cn.action.BookAction" method="add"></action>-->
+        <!--<action name="updateAction" class="cn.action.BookAction" method="update"></action>-->
+
+    <!--</package>-->
+    
+    
+    <!--通配符-->
+    <package name="methodDemo" extends="struts-default" namespace="/" >
+        <action name="book_*" class="cn.action.BookAction" method="{1}">
+
+        </action>
+
+    </package>
+
+</struts>
+

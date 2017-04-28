@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+
+
+    <!--
+    name:与路径无关  可以有多个package name不能相同
+    extends:继承，
+    namespace:
+    -->
+    <package name="helloDemo" extends="struts-default" namespace="/">
+        <!--
+        name:访问的名称
+        -->
+        <action name="helloAction" class="cn.action.helloAction">
+        <!--
+        配置方法的返回值
+        -->
+            <result name="ok">/hello.jsp</result>
+
+        </action>
+    </package>
+
+
+</struts>
+

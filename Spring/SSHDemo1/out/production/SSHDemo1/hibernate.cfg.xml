@@ -37,7 +37,8 @@
 
 
         <!--绑定session-->
-        <property name="hibernate.current_session_context_class">thread</property>
+        <!--<property name="hibernate.current_session_context_class">thread</property>-->
+        <property name="hibernate.current_session_context_class">org.springframework.orm.hibernate5.SpringSessionContext</property>
 
 
         <!--第三部分把映射文件放入核心配置文件中-->
