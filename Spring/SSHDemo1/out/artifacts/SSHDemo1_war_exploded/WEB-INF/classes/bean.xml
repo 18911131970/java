@@ -27,8 +27,28 @@
         <!--注入dataSource-->
         <property name="dataSource" ref="dataSource"></property>
 
-        <!--指定使用的hibernate核心配置文件-->
-        <property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+        <!--指定使用的hibernate核心配置文件
+        -->
+        <!--<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>-->
+
+        <!--如果没hibernate.cfg.xml文件 则用下面的配置方法-->
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate">org.hibernate.dialect.MyISAMStorageEngine</prop>
+                <prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate5.SpringSessionContext</prop>
+            </props>
+        </property>
+        
+        <property name="mappingResources">
+           <list>
+               <value>com/entity/User.hbm.xml</value>
+           </list>
+        </property>
+
     </bean>
 
 
@@ -41,23 +61,29 @@
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
 
-    <bean class="com.action.UserAction" id="userAction" scope="prototype">
-        <property name="userService" ref="userService"></property>
-    </bean>
-
-    <bean class="com.service.UserService" id="userService">
-        <!--接口 == 实现类对象-->
-        <property name="userDao" ref="userDaoImpl"></property>
-
-    </bean>
-
-    <bean class="com.dao.UserDaoImpl" id="userDaoImpl">
-        <property name="hibernateTemplate" ref="hibernateTemplate"></property>
-    </bean>
+    <!--引入其他的spring配置文件-->
+    <import resource="classpath:user.xml"/>
 
 
-    <bean class="org.springframework.orm.hibernate5.HibernateTemplate" id="hibernateTemplate">
-        <property name="sessionFactory" ref="sessionFactory"></property>
-    </bean>
+
+    <!--&lt;!&ndash;配置&ndash;&gt;-->
+    <!--<bean class="com.action.UserAction" id="userAction" scope="prototype">-->
+        <!--<property name="userService" ref="userService"></property>-->
+    <!--</bean>-->
+
+    <!--<bean class="com.service.UserService" id="userService">-->
+        <!--&lt;!&ndash;接口 == 实现类对象&ndash;&gt;-->
+        <!--<property name="userDao" ref="userDaoImpl"></property>-->
+
+    <!--</bean>-->
+
+    <!--<bean class="com.dao.UserDaoImpl" id="userDaoImpl">-->
+        <!--<property name="hibernateTemplate" ref="hibernateTemplate"></property>-->
+    <!--</bean>-->
+
+
+    <!--<bean class="org.springframework.orm.hibernate5.HibernateTemplate" id="hibernateTemplate">-->
+        <!--<property name="sessionFactory" ref="sessionFactory"></property>-->
+    <!--</bean>-->
 
 </beans>

@@ -30,7 +30,7 @@ public class UserDaoImpl implements UserDao {
         User user = hibernateTemplate.get(User.class,1);
         System.out.println(user);
 
-       List<User> list = (List<User>)hibernateTemplate.find("from User");
+        List<User> list = (List<User>)hibernateTemplate.find("from User");
         System.out.println(list);
 
         List<User> list1 = (List<User>)hibernateTemplate.find("from User where username = ?","yangzhe");
