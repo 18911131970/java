@@ -16,24 +16,15 @@
         http://www.springframework.org/schema/tx/spring-tx.xsd"> <!-- bean definitions here -->
 
 
-
-    <!--配置-->
-    <bean class="com.action.UserAction" id="userAction" scope="prototype">
-        <property name="userService" ref="userService"></property>
+    <bean class="com.action.CustomerAction" id="customerAction" scope="prototype">
+        <property name="customerService" ref="customerService"></property>
     </bean>
 
-    <bean class="com.service.UserService" id="userService">
-        <!--接口 == 实现类对象-->
-        <property name="userDao" ref="userDaoImpl"></property>
-
+    <bean class="com.service.CustomerService" id="customerService">
+        <property name="customerDao" ref="customerDaoImpl"></property>
     </bean>
 
-       <bean class="com.dao.UserDaoImpl" id="userDaoImpl">
-        <property name="hibernateTemplate" ref="hibernateTemplate"></property>
-    </bean>
-
-
-    <bean class="org.springframework.orm.hibernate5.HibernateTemplate" id="hibernateTemplate">
+    <bean class="com.dao.CustomerDaoImpl" id="customerDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
 

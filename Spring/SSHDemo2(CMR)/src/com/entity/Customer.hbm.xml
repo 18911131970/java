@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<!--约束-->
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.entity.Customer" table="t_customer">
+        <id name="cid" column="cid">
+            <generator class="native"></generator>
+        </id>
+        <property name="cname"></property>
+        <property name="caddress"></property>
+        <property name="cphone"></property>
+        
+        <!--客户里的所有联系人-->
+        <set name="setLinkMan">
+            <key column="clid"></key>
+            <one-to-many class="com.entity.LinkMan"></one-to-many>
+        </set>
+
+    </class>
+</hibernate-mapping>

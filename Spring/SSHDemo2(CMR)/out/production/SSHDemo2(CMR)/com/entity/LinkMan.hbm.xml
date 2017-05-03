@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<!--约束-->
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.entity.LinkMan" table="t_linkMan">
+        <id name="linkId" column="linkId">
+            <generator class="native"></generator>
+        </id>
+        
+        <property name="lkmName" column="lkmName"></property>
+        <property name="lkmGender"></property>
+        <property name="lkmPhone"></property>
+        <property name="lkmMobile"></property>
+
+        <!--配置联系人属于的客户 一对多-->
+        <many-to-one name="customer" class="com.entity.Customer" column="clid"></many-to-one>
+    </class>
+
+</hibernate-mapping>
