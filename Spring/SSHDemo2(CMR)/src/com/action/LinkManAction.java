@@ -8,7 +8,9 @@ import com.service.CustomerService;
 import com.service.LinkManService;
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
+import org.springframework.orm.hibernate5.support.OpenSessionInViewFilter;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -33,6 +35,7 @@ public class LinkManAction extends ActionSupport implements ModelDriven<LinkMan>
     public LinkMan getModel() {
         return linkMan;
     }
+
 
 
 
@@ -89,4 +92,39 @@ public class LinkManAction extends ActionSupport implements ModelDriven<LinkMan>
         linkManService.addLinkMan(linkMan);
         return "addLinkMan";
     }
+
+    public String list(){
+        List<LinkMan> list = linkManService.listLinkMan();
+        ServletActionContext.getRequest().setAttribute("linkManList",list);
+        return "list";
+    }
+
+    //修改联系人
+    public String show(){
+        int linkId = linkMan.getLinkId();
+
+        HttpServletRequest servletRequest = ServletActionContext.getRequest();
+
+        //客户list集合
+        List<Customer> listCustomer = customerService.findCustomers();
+        servletRequest.setAttribute("listCustomer",listCustomer);
+
+        LinkMan linkMan = linkManService.findOne(linkId);
+        servletRequest.setAttribute("linkMan",linkMan);
+        return "show";
+    }
+
+    public String updataLinkMan(){
+
+        linkManService.updata(linkMan);
+
+        return "updataLinkMan";
+    }
+
+    public String delete(){
+        linkManService.delete(linkMan);
+        return "delete";
+    }
+
+
 }

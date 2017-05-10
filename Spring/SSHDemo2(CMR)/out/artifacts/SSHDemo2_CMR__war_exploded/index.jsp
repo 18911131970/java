@@ -15,5 +15,7 @@
   <a href="${pageContext.request.contextPath}/customer_find.action">查看所有注册用户</a>
   <a href="customerSearch.jsp" >查询单个用户信息</a><br>
   <a href="${pageContext.request.contextPath}/linkMan_toAddPage.action">新增联系人</a>
+  <a href="${pageContext.request.contextPath}/linkMan_list.action">查看联系人</a>
+
   </body>
 </html>

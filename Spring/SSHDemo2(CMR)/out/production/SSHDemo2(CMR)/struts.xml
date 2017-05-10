@@ -5,6 +5,9 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+    <!--设置上传文件的大小-->
+    <constant name="struts.multipart.maxSize" value="209715200"></constant>
+
     <package name="sshDemo1" extends="struts-default" namespace="/">
         <action name="user_*" class="userAction" method="{1}">
             <result name="loginSuccess">/index.jsp</result>
@@ -26,6 +29,12 @@
         <action name="linkMan_*" class="linkManAction" method="{1}">
             <result name="toAddPage">/linkMan/addLinkMan.jsp</result>
             <result name="addLinkMan">/index.jsp</result>
+            <result name="list">/linkMan/list.jsp</result>
+            <result name="show">/linkMan/showLinkMan.jsp</result>
+            <result name="updataLinkMan" type="redirectAction">linkMan_list</result>
+            <result name="delete" type="redirectAction">linkMan_list</result>
+            <!--配置input的结果-->
+            <result name="input">/error.jsp</result>
         </action>
 
     </package>

@@ -15,8 +15,8 @@
         <property name="caddress"></property>
         <property name="cphone"></property>
         
-        <!--客户里的所有联系人-->
-        <set name="setLinkMan">
+        <!--客户里的所有联系人   inverse="true"  放弃对外键的维护-->
+        <set name="setLinkMan" inverse="true" cascade="delete">
             <key column="clid"></key>
             <one-to-many class="com.entity.LinkMan"></one-to-many>
         </set>

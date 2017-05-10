@@ -29,7 +29,10 @@
         <action name="linkMan_*" class="linkManAction" method="{1}">
             <result name="toAddPage">/linkMan/addLinkMan.jsp</result>
             <result name="addLinkMan">/index.jsp</result>
-
+            <result name="list">/linkMan/list.jsp</result>
+            <result name="show">/linkMan/showLinkMan.jsp</result>
+            <result name="updataLinkMan" type="redirectAction">linkMan_list</result>
+            <result name="delete" type="redirectAction">linkMan_list</result>
             <!--配置input的结果-->
             <result name="input">/error.jsp</result>
         </action>

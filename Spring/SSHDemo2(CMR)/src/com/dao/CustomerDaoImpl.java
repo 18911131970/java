@@ -57,6 +57,7 @@ public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao 
         return 0;
     }
 
+    /*分页查询*/
     @Override
     public List<Customer> findPage(Integer begin, Integer pageSize) {
 //        SessionFactory sessionFactory = this.getSessionFactory();
@@ -75,6 +76,7 @@ public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao 
         return list;
     }
 
+    /*条件查询*/
     @Override
     public List<Customer> findCondition(Customer customer) {
         //第一种方法
