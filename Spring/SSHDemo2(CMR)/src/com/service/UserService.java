@@ -4,6 +4,8 @@ import com.dao.UserDao;
 import com.entity.User;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by yangzhe on 2017/5/2.
  */
@@ -19,4 +21,9 @@ public class UserService {
         return userDao.loginUser(user);
     }
 
+    public List<User> findUsers() {
+
+        return userDao.findUsers();
+
+    }
 }

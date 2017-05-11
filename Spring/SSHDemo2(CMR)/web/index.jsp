@@ -17,5 +17,8 @@
   <a href="${pageContext.request.contextPath}/linkMan_toAddPage.action">新增联系人</a>
   <a href="${pageContext.request.contextPath}/linkMan_list.action">查看联系人</a>
 
+  <br><br><br>
+  <a href="${pageContext.request.contextPath}/visit_toAddPage.action">新增客户拜访</a>
+
   </body>
 </html>

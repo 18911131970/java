@@ -37,5 +37,12 @@
             <result name="input">/error.jsp</result>
         </action>
 
+
+        <!--拜访-->
+        <action name="visit_*" class="visitAction" method="{1}">
+            <result name="toAddPage">/visit/addVisit.jsp</result>
+            <result name="add">/index.jsp</result>
+        </action>
+
     </package>
 </struts>

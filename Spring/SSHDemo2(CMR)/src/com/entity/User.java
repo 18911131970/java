@@ -1,5 +1,8 @@
 package com.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by yangzhe on 2017/5/2.
  */
@@ -8,6 +11,17 @@ public class User {
     private String username;
     private String password;
     private String address;
+
+
+    //用户中所有的拜访记录
+    private Set<Visit> setUserVisit = new HashSet<Visit>();
+    public Set<Visit> getSetUserVisit() {
+        return setUserVisit;
+    }
+
+    public void setSetUserVisit(Set<Visit> setUserVisit) {
+        this.setUserVisit = setUserVisit;
+    }
 
     public Integer getUid() {
         return uid;

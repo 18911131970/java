@@ -16,6 +16,12 @@
         <property name="password"></property>
         <property name="address"></property>
 
+        <!--用户的多条拜访记录-->
+        <set name="setUserVisit">
+            <key column="uvid"></key>
+            <one-to-many class="com.entity.Visit"></one-to-many>
+        </set>
+
     </class>
 
 </hibernate-mapping>

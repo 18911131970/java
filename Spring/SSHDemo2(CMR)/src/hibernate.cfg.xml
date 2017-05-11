@@ -45,6 +45,8 @@
         <mapping resource="com/entity/User.hbm.xml"></mapping>
         <mapping resource="com/entity/Customer.hbm.xml"></mapping>
         <mapping resource="com/entity/LinkMan.hbm.xml"></mapping>
+        <mapping resource="com/entity/Visit.hbm.xml"></mapping>
+
     </session-factory>
 </hibernate-configuration>
 

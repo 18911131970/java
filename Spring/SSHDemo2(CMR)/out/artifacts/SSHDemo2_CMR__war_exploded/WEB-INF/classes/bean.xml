@@ -60,5 +60,6 @@
     <!--外部引入配置文件-->
     <import resource="classpath:customer.xml"/>
     <import resource="classpath:linMan.xml"/>
+    <import resource="classpath:visit.xml"/>
 
 </beans>

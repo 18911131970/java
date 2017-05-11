@@ -12,6 +12,18 @@ public class Customer {
     private String caddress;
     private String cphone;
 
+
+    //客户所有拜访记录
+    private Set<Visit> setCustomerVisit = new HashSet<Visit>();
+
+    public Set<Visit> getSetCustomerVisit() {
+        return setCustomerVisit;
+    }
+
+    public void setSetCustomerVisit(Set<Visit> setCustomerVisit) {
+        this.setCustomerVisit = setCustomerVisit;
+    }
+
     private Set<LinkMan> setLinkMan = new HashSet<LinkMan>();
 
     public Set<LinkMan> getSetLinkMan() {

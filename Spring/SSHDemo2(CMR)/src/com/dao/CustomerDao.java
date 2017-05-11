@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by yangzhe on 2017/5/2.
  */
-public interface CustomerDao {
+public interface CustomerDao extends BaseDao<Customer> {
     public void add(Customer customer);
     public List<Customer> findCustomers();
     public Customer findOne(Integer cid);

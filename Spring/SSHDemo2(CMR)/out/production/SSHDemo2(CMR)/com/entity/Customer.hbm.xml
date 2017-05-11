@@ -21,5 +21,11 @@
             <one-to-many class="com.entity.LinkMan"></one-to-many>
         </set>
 
+        <!--客户的多条被拜访记录-->
+        <set name="setCustomerVisit">
+            <key column="cvid"></key>
+            <one-to-many class="com.entity.Visit"></one-to-many>
+        </set>
+
     </class>
 </hibernate-mapping>
