@@ -17,12 +17,12 @@ public class LinkManService {
     }
 
     public void addLinkMan(LinkMan linkMan){
-        linkManDao.addLinkMan(linkMan);
+        linkManDao.add(linkMan);
     }
 
     public List<LinkMan> listLinkMan() {
 
-        return linkManDao.listLinkMan();
+        return linkManDao.findAll();
     }
 
     public LinkMan findOne(int linkId) {
@@ -30,7 +30,7 @@ public class LinkManService {
     }
 
     public void updata(LinkMan linkMan) {
-        linkManDao.updata(linkMan);
+        linkManDao.update(linkMan);
     }
 
     public void delete(LinkMan linkMan) {

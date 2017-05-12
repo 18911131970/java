@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by yangzhe on 2017/5/2.
  */
-public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
+public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
     @Override
     public User loginUser(User user) {
         //调用方法获取hibernateTemplate对象
@@ -26,10 +26,10 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 
     }
 
-    @Override
-    public List<User> findUsers() {
-
-        List<User> list = (List<User>)this.getHibernateTemplate().find("from User");
-        return list;
-    }
+//    @Override
+//    public List<User> findUsers() {
+//
+//        List<User> list = (List<User>)this.getHibernateTemplate().find("from User");
+//        return list;
+//    }
 }

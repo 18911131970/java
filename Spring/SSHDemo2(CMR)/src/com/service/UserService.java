@@ -23,7 +23,7 @@ public class UserService {
 
     public List<User> findUsers() {
 
-        return userDao.findUsers();
+        return userDao.findAll();
 
     }
 }

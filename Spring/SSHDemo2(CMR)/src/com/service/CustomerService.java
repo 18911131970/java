@@ -25,7 +25,7 @@ public class CustomerService {
     }
 
     public List<Customer> findCustomers(){
-        return customerDao.findCustomers();
+        return customerDao.findAll();
     }
 
     public void delete(Customer customer){
@@ -37,7 +37,7 @@ public class CustomerService {
     }
 
     public void updata(Customer customer){
-        customerDao.updata(customer);
+        customerDao.update(customer);
     }
 
     //封装分页的数据到pageBean中

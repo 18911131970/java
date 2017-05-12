@@ -7,9 +7,9 @@ import java.util.List;
 /**
  * Created by yangzhe on 2017/5/2.
  */
-public interface UserDao {
+public interface UserDao extends BaseDao<User> {
 
     public User loginUser(User user);
 
-    List<User> findUsers();
+//    List<User> findUsers();
 }

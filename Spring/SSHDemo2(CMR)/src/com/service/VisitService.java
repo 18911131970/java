@@ -19,4 +19,8 @@ public class VisitService {
     public void add(Visit visit) {
         visitDao.add(visit);
     }
+
+    public void delete(Visit visit){
+        visitDao.delete(visit);
+    }
 }
