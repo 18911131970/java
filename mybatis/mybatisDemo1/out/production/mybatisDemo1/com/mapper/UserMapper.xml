@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--namespace:命名空间 作用就是对sql的隔离
+    使用mapper代理方法开发，namespace有特殊重要的作用  等于mapper接口的地址
+-->
+<mapper namespace="com.mapper.UserMapper">
+
+
+    <!--用户信息的综合查询-->
+    <select id="findUserList" parameterType="UserQueryVo" resultType="com.entity.UserCustom">
+        SELECT * FROM user u WHERE u.sex = #{userCustom.sex} AND u.username LIKE '%${userCustom.username}%'
+    </select>
+
+
+    <!--在映射文件中配置sql语句-->
+
+    <!-- 通过select执行数据库查询
+    id:标示映射文件的sql，称为statement的id
+    sql语句封装到mappedstatement对象中，将id称为statement的id
+    #{}表示一个占位符
+    parameterType:输入的映射参数类型
+    #{id}:id表示接收输入的参数，参数名称是id，如果输入的参数是简单类型
+          #{}中的参数可以是任意的 可以value或其他名称
+    resultType: 指定sql输出结果所映射的java类型，单条记录映射为java对象
+
+    -->
+    <select id="findUserById" parameterType="int" resultType="User">
+      SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <!--
+    ${}:表示拼接sql串，将接收到的参数的内容不加任何修饰拼接在sql中
+    使用${}拼接sql，会引起sql注入
+    ${value}:接收输入的参数类型如果是简单类型 ${}中只能使用value
+    -->
+    <select id="findUserByUsername" parameterType="java.lang.String" resultType="com.entity.User">
+        SELECT * FROM user WHERE username LIKE '%${value}%'
+    </select>
+    
+    <!--添加用户
+    -->
+    <insert id="insertUser" parameterType="com.entity.User">
+        INSERT INTO  user(id,username,birthday,sex,address) VALUE (
+                                                              #{id},
+                                                              #{username},
+                                                              #{birthday},
+                                                              #{sex},
+                                                              #{address}
+                                                              )
+    </insert>
+
+
+
+    <!--删除用户信息-->
+
+    <delete id="deleteUser" parameterType="int">
+        DELETE FROM user WHERE id=#{id}
+    </delete>
+    
+    <!--更新用户信息-->
+    <update id="updateUser" parameterType="com.entity.User">
+        UPDATE user SET username=#{username},
+                        birthday=#{birthday},
+                        sex=#{sex},
+                        address=#{address}  WHERE id=#{id}
+    </update>
+
+</mapper>

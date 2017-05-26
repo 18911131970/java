@@ -1,0 +1,47 @@
+[DEBUG][2017/05/16 15:31:06742][org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:135)]
+Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+ [DEBUG][2017/05/16 15:31:07567][org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:316)]
+PooledDataSource forcefully closed/removed all connections.
+ [DEBUG][2017/05/16 15:31:07580][org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:316)]
+PooledDataSource forcefully closed/removed all connections.
+ [DEBUG][2017/05/16 15:31:07594][org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:316)]
+PooledDataSource forcefully closed/removed all connections.
+ [DEBUG][2017/05/16 15:31:07601][org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:316)]
+PooledDataSource forcefully closed/removed all connections.
+ [DEBUG][2017/05/16 15:31:0841 ][org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:136)]
+Opening JDBC Connection
+ [DEBUG][2017/05/16 15:31:08133][org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:387)]
+Created connection 614685048.
+ [DEBUG][2017/05/16 15:31:08145][org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit(JdbcTransaction.java:100)]
+Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@24a35978]
+ [DEBUG][2017/05/16 15:31:08153][org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159)]
+==>  Preparing: SELECT * FROM user WHERE id = ? 
+ [DEBUG][2017/05/16 15:31:08213][org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159)]
+==> Parameters: 1(Integer)
+ [DEBUG][2017/05/16 15:31:08380][org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159)]
+<==      Total: 1
+ [DEBUG][2017/05/16 15:31:27563][org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:135)]
+Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+ [DEBUG][2017/05/16 15:31:28408][org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:316)]
+PooledDataSource forcefully closed/removed all connections.
+ [DEBUG][2017/05/16 15:31:28460][org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:316)]
+PooledDataSource forcefully closed/removed all connections.
+ [DEBUG][2017/05/16 15:31:28484][org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:316)]
+PooledDataSource forcefully closed/removed all connections.
+ [DEBUG][2017/05/16 15:31:28490][org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll(PooledDataSource.java:316)]
+PooledDataSource forcefully closed/removed all connections.
+ [DEBUG][2017/05/16 15:31:28816][org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection(JdbcTransaction.java:136)]
+Opening JDBC Connection
+ [DEBUG][2017/05/16 15:31:28939][org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection(PooledDataSource.java:387)]
+Created connection 614685048.
+ [DEBUG][2017/05/16 15:31:28947][org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit(JdbcTransaction.java:100)]
+Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@24a35978]
+ [DEBUG][2017/05/16 15:31:28955][org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159)]
+==>  Preparing: SELECT * FROM user WHERE id = ? 
+ [DEBUG][2017/05/16 15:31:2997 ][org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159)]
+==> Parameters: 1(Integer)
+ [DEBUG][2017/05/16 15:31:29178][org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159)]
+<==      Total: 1
+ [DEBUG][2017/05/17 14:17:22280][org.apache.ibatis.logging.LogFactory.setImplementation(LogFactory.java:135)]
+Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+ 
